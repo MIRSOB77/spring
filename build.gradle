@@ -1,0 +1,80 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+jar {
+    baseName = 'myproject'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.springframework.boot:spring-boot-starter-hornetq")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jersey")
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+    compile("org.springframework.boot:spring-boot-starter-velocity")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-social-facebook")
+    compile("org.springframework.boot:spring-boot-starter-social-linkedin")
+    compile("org.springframework.boot:spring-boot-starter-social-twitter")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-cloud-connectors")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+
+    runtime ([
+
+            // Hibernate - runtime, needs cglib v2.2.2 with Guice
+            'org.hibernate:hibernate-entitymanager:3.4.0.GA',
+            'cglib:cglib:2.2.2',
+
+            // BeanShell - used by Workflow Descriptions for step/action scripts
+            "bsh:bsh:1.3.0",
+
+            // Logging Runtime
+           // "org.slf4j:slf4j-log4j12:1.6.1",
+          //  "log4j:log4j:1.2.16",
+
+            // C3P0 - Connection Pooling
+            "c3p0:c3p0:0.9.1",
+
+            // Various database drivers; Add or remove accordingly
+            "mysql:mysql-connector-java:5.1.25",
+            'com.h2database:h2:1.3.170'
+
+    ])
+}
+
+eclipse {
+    classpath {
+         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}

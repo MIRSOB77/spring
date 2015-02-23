@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-social-twitter:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-social-twitter/1.2.1.RELEASE/b5926c5a89295e6d235b017a690d04c3b7534219/spring-boot-starter-social-twitter-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-social-twitter/1.2.1.RELEASE/be7603e2d1e6216067a8cef943129b0f13bf73f0/spring-boot-starter-social-twitter-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

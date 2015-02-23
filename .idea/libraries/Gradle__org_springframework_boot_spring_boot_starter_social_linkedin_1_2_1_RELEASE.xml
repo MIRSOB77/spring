@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-social-linkedin:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-social-linkedin/1.2.1.RELEASE/234ce7aa5b5c1841f95e2b1841fec3ee0c48e952/spring-boot-starter-social-linkedin-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-social-linkedin/1.2.1.RELEASE/fb265f1f30fa990c097d2145e6652267ae7202cf/spring-boot-starter-social-linkedin-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
